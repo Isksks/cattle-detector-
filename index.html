@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BoviScan - AI Assistant</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="background-effects">
+        <div class="glow blob-1"></div>
+        <div class="glow blob-2"></div>
+    </div>
+
+    <main class="chat-container">
+        <header class="chat-header">
+            <div class="logo">
+                <i class="fa-solid fa-cow"></i>
+                <h1>BoviScan AI</h1>
+            </div>
+            <p class="subtitle">Your virtual cattle diagnostics expert</p>
+        </header>
+
+        <section class="chat-history" id="chat-history">
+            <!-- Initial Greeting -->
+            <div class="message ai-message">
+                <div class="avatar"><i class="fa-solid fa-robot"></i></div>
+                <div class="message-content">
+                    <p>Hello! I am BoviScan, your advanced AI cattle analysis assistant. Please upload a clear image of
+                        your cattle, and I will assess its breed, estimate milk yield, and identify any potential health
+                        risks.</p>
+                </div>
+            </div>
+            <!-- Dynamic messages will be appended here -->
+        </section>
+
+        <section class="chat-input-area">
+            <div class="input-wrapper glass-panel">
+                <button class="btn icon-btn attach-btn" id="btn-attach" title="Upload Image">
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+                <input type="file" id="file-input" accept="image/*" hidden>
+
+                <div class="image-preview-wrapper hidden" id="input-preview-wrapper">
+                    <img id="input-preview" src="" alt="Selected">
+                    <button class="remove-preview" id="btn-remove-preview"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+
+                <input type="text" class="text-input" id="text-input" placeholder="Upload an image to start analysis..."
+                    disabled>
+
+                <button class="btn icon-btn send-btn primary" id="btn-send" disabled title="Send Analysis Request">
+                    <i class="fa-solid fa-paper-plane"></i>
+                </button>
+            </div>
+        </section>
+    </main>
+    <script src="app.js"></script>
+</body>
+
+</html>
